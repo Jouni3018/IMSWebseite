@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>IMSBern</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Cardo|Montserrat" rel="stylesheet">
+        <link href="Css/css.css" rel=stylesheet>   
+    </head>
+    
+    <body>
+        <div id="container">
+            <h1 id="title">IMSBern</h1>
+            <nav>
+            <div id="menue">
+                <ul>
+                    <li><a href="index.html">Was ist die IMS?</a></li>
+                    <li><a href="lernsituation.html">Lernsituation</a></li>
+                    <li><a href="ferien.html">Ferien</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="fragen.html">Fragen</a></li>
+                </ul>
+            </div>
+            </nav>
+            <h2>Standort</h2>
+            <div id="map">
+            </div>
+            <script>
+                function myMap() {
+                    var mapCanvas = document.getElementById("map");
+                    var mapOptions = {
+                            center: new google.maps.LatLng(46.962017, 7.464540),
+                            zoom: 14
+                            };
+                    var map = new google.maps.Map(mapCanvas, mapOptions);
+                    var marker = new google.maps.Marker({
+                            position:{lat:46.962017,lng:7.464540},
+                            map:map
+                            });
+                    }   
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDL2ni7ykScXhbUaQZi1sPlzBMvHqx9KE&callback=myMap"></script>
+            <br/><br/>
+            <div>
+                <h2 id="kontakt">Kontakt</h2>
+                <p>
+                    Bildungszentrum für Wirtschaft und Dienstleistung<br/>
+                    bwd IMS Informatikmittelschule Bern<br/>
+                    Papiermühlestrasse 65<br/>
+                    CH-3014 Bern<br/>
+                    Telefon 031 330 19 70<br/>
+                    Öffnungszeiten Info-Desk: <br/>
+                    Montag - Freitag  07.30 - 12.30 und 13.30 - 17.15<br/>
+                    Webseite: <a href="https://www.bwdbern.ch" >Bwdbern.ch</a><br/> 
+                </p>
+            </div> 
+            <div class="fertigfloat">
+                <footer>
+                    <div id="footerrechts">
+                    &copy;2018 IMSBern
+                    </div>
+                    <div id="footerlinks">
+                    <a href="impressum.html">Impressum</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
